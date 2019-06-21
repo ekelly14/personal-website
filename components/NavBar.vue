@@ -1,20 +1,32 @@
 <template>
   <no-ssr>
     <section
-      class="flex flex-row mx-auto fixed bg-teal-300 w-full"
+      class="flex flex-row mx-auto fixed navbar w-full"
       v-bind:class="{ scrolled: isScrolled }"
     >
       <nuxt-link to="/">
-        <div class="px-10 py-5 w-auto hover:bg-teal-400 hover:text-white">Home</div>
+        <div
+          class="navitem hover:bg-teal-300 hover:text-white"
+          v-bind:class="{ itemscrolled: isScrolled }"
+        >Home</div>
       </nuxt-link>
       <nuxt-link to="/about">
-        <div class="px-10 py-5 w-auto hover:bg-teal-400 hover:text-white">About Me</div>
+        <div
+          class="navitem hover:bg-teal-300 hover:text-white"
+          v-bind:class="{ itemscrolled: isScrolled }"
+        >About Me</div>
       </nuxt-link>
       <nuxt-link to="/about">
-        <div class="px-10 py-5 w-auto hover:bg-teal-400 hover:text-white">Hobbies</div>
+        <div
+          class="navitem hover:bg-teal-300 hover:text-white"
+          v-bind:class="{ itemscrolled: isScrolled }"
+        >Hobbies</div>
       </nuxt-link>
       <a href="https://github.com/ekelly14">
-        <div class="px-10 py-5 hover:bg-teal-400 hover:text-white">GitHub</div>
+        <div
+          class="navitem hover:bg-teal-300 hover:text-white"
+          v-bind:class="{ itemscrolled: isScrolled }"
+        >GitHub</div>
       </a>
     </section>
   </no-ssr>
@@ -48,7 +60,29 @@ export default {
 </script>
 
 <style scoped>
+.navbar {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 79, 161, 1) 0%,
+    rgba(0, 79, 161, 0.4) 45%,
+    rgba(0, 79, 161, 0.1) 80%,
+    rgba(0, 79, 161, 0) 100%
+  );
+  border-top: 4px solid rgba(0, 79, 161, 1);
+  height: 72px;
+  transition: all 0.3s;
+  z-index: 1000;
+}
 .scrolled {
   background: white;
+}
+.navitem {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: auto;
+  height: 72px;
+}
+.itemscrolled:hover {
+  background-color: rgb(204, 201, 201);
 }
 </style>

@@ -1,5 +1,5 @@
 
-module.exports = {
+export default {
   mode: 'universal',
   /*
   ** Headers of the page
@@ -23,12 +23,20 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/css/tailwind.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+  ],
+  /*
+  ** Nuxt.js dev-modules
+  */
+  devModules: [
+    // Doc: https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/eslint-module',
+    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
+    '@nuxtjs/tailwindcss',
   ],
   /*
   ** Nuxt.js modules
@@ -47,11 +55,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    postcss: {
-      plugins: {
-        tailwindcss: './tailwind.config.js'
-      }
-    },
     /*
     ** You can extend webpack config here
     */

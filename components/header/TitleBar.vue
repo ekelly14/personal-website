@@ -1,31 +1,22 @@
 <template>
   <no-ssr>
-    <section
-      class="flex flex-row mx-auto fixed navbar w-full"
-      v-bind:class="{ scrolled: isScrolled }"
-    >
+    <section class="flex flex-row mx-auto fixed navbar w-full" :class="{ scrolled: isScrolled }">
       <nuxt-link to="/">
         <div
           class="navitem hover:bg-teal-300 hover:text-white"
-          v-bind:class="{ itemscrolled: isScrolled }"
+          :class="{ itemscrolled: isScrolled }"
         >Home</div>
       </nuxt-link>
       <nuxt-link to="/about">
         <div
           class="navitem hover:bg-teal-300 hover:text-white"
-          v-bind:class="{ itemscrolled: isScrolled }"
+          :class="{ itemscrolled: isScrolled }"
         >About Me</div>
-      </nuxt-link>
-      <nuxt-link to="/about">
-        <div
-          class="navitem hover:bg-teal-300 hover:text-white"
-          v-bind:class="{ itemscrolled: isScrolled }"
-        >Hobbies</div>
       </nuxt-link>
       <a href="https://github.com/ekelly14">
         <div
           class="navitem hover:bg-teal-300 hover:text-white"
-          v-bind:class="{ itemscrolled: isScrolled }"
+          :class="{ itemscrolled: isScrolled }"
         >GitHub</div>
       </a>
     </section>
@@ -34,25 +25,25 @@
 
 <script>
 export default {
-  name: 'NavBar',
+  name: 'TitleBar',
   data() {
     return {
       isScrolled: false
     }
   },
   beforeMount() {
-    //Check if the page is already scrolled
+    // Check if the page is already scrolled
     this.handleScroll()
-    //initializes the event listener for scroll
+    // initializes the event listener for scroll
     window.addEventListener('scroll', this.handleScroll)
   },
   beforeDestroy() {
-    //cleanup events before destroy
+    // cleanup events before destroy
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleScroll() {
-      //Check if the page is scrolled from the original position
+      // Check if the page is scrolled from the original position
       this.isScrolled = window.pageYOffset > 35
     }
   }

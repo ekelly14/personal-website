@@ -1,40 +1,23 @@
 <template>
   <no-ssr>
-    <section
-      class="flex flex-row mx-auto fixed navbar w-full"
-      :class="{ scrolled: isScrolled }"
-    >
+    <section class="flex flex-row mx-auto fixed navbar w-full" :class="{ scrolled: isScrolled }">
       <nuxt-link to="/">
         <div
           class="navitem hover:bg-teal-300 hover:text-white"
           :class="{ itemscrolled: isScrolled }"
-        >
-          Home
-        </div>
+        >Home</div>
       </nuxt-link>
       <nuxt-link to="/about">
         <div
           class="navitem hover:bg-teal-300 hover:text-white"
           :class="{ itemscrolled: isScrolled }"
-        >
-          About Me
-        </div>
-      </nuxt-link>
-      <nuxt-link to="/about">
-        <div
-          class="navitem hover:bg-teal-300 hover:text-white"
-          :class="{ itemscrolled: isScrolled }"
-        >
-          Hobbies
-        </div>
+        >About Me</div>
       </nuxt-link>
       <a href="https://github.com/ekelly14">
         <div
           class="navitem hover:bg-teal-300 hover:text-white"
           :class="{ itemscrolled: isScrolled }"
-        >
-          GitHub
-        </div>
+        >GitHub</div>
       </a>
     </section>
   </no-ssr>

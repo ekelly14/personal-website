@@ -1,23 +1,24 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        personal-website
-      </h1>
-      <h2 class="subtitle">
-        A personal portfolio website
-      </h2>
+  <section>
+    <TitleBar />
+    <div class="container w-full">
+      <div>
+        <logo />
+        <h1 class="title">personal-website</h1>
+        <h2 class="subtitle">A personal portfolio website</h2>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import TitleBar from '~/components/header/TitleBar.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    TitleBar
   }
 }
 </script>

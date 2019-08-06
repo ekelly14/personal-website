@@ -52,13 +52,7 @@ export default {
 
 <style scoped>
 .navbar {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 79, 161, 1) 0%,
-    rgba(0, 79, 161, 0.4) 45%,
-    rgba(0, 79, 161, 0.1) 80%,
-    rgba(0, 79, 161, 0) 100%
-  );
+  background: rgb(235, 235, 235);
   border-top: 4px solid rgba(0, 79, 161, 1);
   height: 72px;
   transition: all 0.3s;

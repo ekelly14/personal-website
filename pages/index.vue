@@ -1,24 +1,36 @@
 <template>
-  <section>
+  <div class="w-full">
     <TitleBar />
-    <div class="container w-full">
-      <div>
-        <logo />
-        <h1 class="title">personal-website</h1>
-        <h2 class="subtitle">A personal portfolio website</h2>
+    <div class="header-image">
+      <div class="home w-full">
+        <div class="w-full">
+          <logo />
+          <h1 class="title">Hi! I'm Elijah.</h1>
+          <span class="text-6xl">Let Me Write Your </span>
+          <VueTyperWrapper class="text-6xl" :text-list="['C++', 'Python', 'JavaScript', 'Vue']" :shuffle="true"></VueTyperWrapper>
+          <!-- <vue-typer class="text-6xl" text="Typer Text Here"></vue-typer> -->
+        </div>
       </div>
     </div>
-  </section>
+    <TextBlock title="Text" :text-on-right="false" :border-bottom="true" text="text text text text i need stuff to type lots of text to go here" />
+    <TextBlock :text-on-right="true" :border-bottom="false" image-url="corsairHydroX.jpg" text="text text text text i need stuff to type lots of text to go here" />
+    <TextBlock title="Text" :text-on-right="false" :border-bottom="false" image-url="computer2.jpg" text="text text text text i need stuff to type lots of text to go here" />
+    <TextBlock :text-on-right="true" :border-bottom="true" image-url="computer1.jpg" text="text text text text i need stuff to type lots of text to go here" />
+    <div class="mb-10" />
+  </div>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
 import TitleBar from '~/components/header/TitleBar.vue'
-
+import VueTyperWrapper from '~/components/general/VueTyperWrapper.vue'
+import TextBlock from '~/components/general/TextBlock.vue'
 export default {
   components: {
     Logo,
-    TitleBar
+    TitleBar,
+    VueTyperWrapper,
+    TextBlock
   }
 }
 </script>
@@ -29,15 +41,20 @@ export default {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
-  margin: 0 auto;
+.home {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: rgba(41, 41, 41, .95);
 }
+.header-image {
+  width: 100%;
+  background-image: url('~assets/images/header.jpg');
 
+}
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -47,7 +64,6 @@ export default {
   color: #35495e;
   letter-spacing: 1px;
 }
-
 .subtitle {
   font-weight: 300;
   font-size: 42px;
@@ -55,7 +71,6 @@ export default {
   word-spacing: 5px;
   padding-bottom: 15px;
 }
-
 .links {
   padding-top: 15px;
 }

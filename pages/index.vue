@@ -12,11 +12,17 @@
         </div>
       </div>
     </div>
+    <!--
     <TextBlock title="Text" :text-on-right="false" :border-bottom="true" text="text text text text i need stuff to type lots of text to go here" />
     <TextBlock :text-on-right="true" :border-bottom="false" image-url="corsairHydroX.jpg" text="text text text text i need stuff to type lots of text to go here" />
     <TextBlock title="Text" :text-on-right="false" :border-bottom="false" image-url="computer2.jpg" text="text text text text i need stuff to type lots of text to go here" />
     <TextBlock :text-on-right="true" :border-bottom="true" image-url="computer1.jpg" text="text text text text i need stuff to type lots of text to go here" />
     <div class="mb-10" />
+    -->
+    <div v-for="item in items" :key="item.id">
+      <TextBlock :title="item.title" :text="item.text" :text-on-right="item.textOnRight" :image-url="item.image" :border-bottom="item.border" />
+    </div>
+    <div class="mb-10"/>
   </div>
 </template>
 
@@ -25,12 +31,18 @@ import Logo from '~/components/Logo.vue'
 import TitleBar from '~/components/header/TitleBar.vue'
 import VueTyperWrapper from '~/components/general/VueTyperWrapper.vue'
 import TextBlock from '~/components/general/TextBlock.vue'
+import bodyText from '~/assets/data/bodyText.js'
 export default {
   components: {
     Logo,
     TitleBar,
     VueTyperWrapper,
     TextBlock
+  },
+  data() {
+    return {
+      items: bodyText
+    }
   }
 }
 </script>

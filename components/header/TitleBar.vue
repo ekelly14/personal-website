@@ -53,7 +53,7 @@ export default {
 <style scoped>
 .navbar {
   background: rgb(235, 235, 235);
-  border-top: 4px solid rgba(0, 79, 161, 1);
+  border-top: 4px solid #052f5f;
   height: 72px;
   transition: all 0.3s;
   z-index: 1000;

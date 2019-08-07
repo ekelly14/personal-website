@@ -49,7 +49,7 @@
 
 <style scoped>
 .bottom-border {
-  border-bottom: 2px solid coral;
+  border-bottom: 2px solid #052f5f;
 }
 .text-block {
   flex-basis: 55%;

@@ -6,15 +6,12 @@
         <div class="w-full">
           <logo />
           <h1 class="title text-blue-light">Hi! I'm Elijah.</h1>
-          <span class="text-6xl text-grey">I Can Write Your </span>
+          <span class="text-6xl">I Can Write Your </span>
           <VueTyperWrapper class="text-6xl" :text-list="['C++', 'Python', 'JavaScript', 'Vue']" :shuffle="true"></VueTyperWrapper>
-          <!-- <vue-typer class="text-6xl" text="Typer Text Here"></vue-typer> -->
         </div>
       </div>
     </div>
-    <div v-for="item in items" :key="item.id">
-      <TextBlock :title="item.title" :text="item.text" :text-on-right="item.textOnRight" :image-url="item.image" :border-bottom="item.border" class="body" />
-    </div>
+    <BodyText />
     <div class="mb-10"/>
   </div>
 </template>
@@ -24,28 +21,19 @@ import Logo from '~/components/Logo.vue'
 import TitleBar from '~/components/header/TitleBar.vue'
 import VueTyperWrapper from '~/components/general/VueTyperWrapper.vue'
 import TextBlock from '~/components/general/TextBlock.vue'
-import bodyText from '~/assets/data/bodyText.js'
+import BodyText from '~/components/blocks/BodyText.vue'
 export default {
   components: {
     Logo,
     TitleBar,
     VueTyperWrapper,
-    TextBlock
-  },
-  data() {
-    return {
-      items: bodyText
-    }
+    TextBlock,
+    BodyText
   }
 }
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
 .home {
   width: 100%;
   min-height: 100vh;

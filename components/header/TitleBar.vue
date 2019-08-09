@@ -7,11 +7,11 @@
           :class="{ itemscrolled: isScrolled }"
         >Home</div>
       </nuxt-link>
-      <nuxt-link to="/about">
+      <nuxt-link to="/contact">
         <div
           class="navitem hover:bg-teal-300 hover:text-white"
           :class="{ itemscrolled: isScrolled }"
-        >About Me</div>
+        >Contact Me</div>
       </nuxt-link>
       <a href="https://github.com/ekelly14">
         <div

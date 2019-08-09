@@ -5,22 +5,15 @@
       <div class="home w-full">
         <div class="w-full">
           <logo />
-          <h1 class="title">Hi! I'm Elijah.</h1>
-          <span class="text-6xl">Let Me Write Your </span>
+          <h1 class="title text-blue-light">Hi! I'm Elijah.</h1>
+          <span class="text-6xl text-grey">I Can Write Your </span>
           <VueTyperWrapper class="text-6xl" :text-list="['C++', 'Python', 'JavaScript', 'Vue']" :shuffle="true"></VueTyperWrapper>
           <!-- <vue-typer class="text-6xl" text="Typer Text Here"></vue-typer> -->
         </div>
       </div>
     </div>
-    <!--
-    <TextBlock title="Text" :text-on-right="false" :border-bottom="true" text="text text text text i need stuff to type lots of text to go here" />
-    <TextBlock :text-on-right="true" :border-bottom="false" image-url="corsairHydroX.jpg" text="text text text text i need stuff to type lots of text to go here" />
-    <TextBlock title="Text" :text-on-right="false" :border-bottom="false" image-url="computer2.jpg" text="text text text text i need stuff to type lots of text to go here" />
-    <TextBlock :text-on-right="true" :border-bottom="true" image-url="computer1.jpg" text="text text text text i need stuff to type lots of text to go here" />
-    <div class="mb-10" />
-    -->
     <div v-for="item in items" :key="item.id">
-      <TextBlock :title="item.title" :text="item.text" :text-on-right="item.textOnRight" :image-url="item.image" :border-bottom="item.border" />
+      <TextBlock :title="item.title" :text="item.text" :text-on-right="item.textOnRight" :image-url="item.image" :border-bottom="item.border" class="body" />
     </div>
     <div class="mb-10"/>
   </div>
@@ -73,7 +66,7 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  /*color: #35495e;*/
   letter-spacing: 1px;
 }
 .subtitle {

@@ -10,7 +10,7 @@ export default [
   {
     id: 2,
     title: 'Education',
-    text: 'I\'m a Junior at Missouri University of Science and Technology. I have earned a 3.3 GPA in the two years I\'ve been on campus. Since starting the computer science program, I\'ve had experience with data structures, algorithms, digital logic, and discrete mathematics. Every semester I look to gain more knowledge both in and out of the classroom through personal projects.',
+    text: 'I\'m a Junior at Missouri University of Science and Technology. I have earned a 3.3 GPA in the two years I\'ve been on campus. Since starting the computer science program, I\'ve had experience with data structures, algorithms, digital logic, microcontrollers, and discrete mathematics. Every semester I look to gain more knowledge both in and out of the classroom through personal projects.',
     textOnRight: true,
     image: 'computer2.jpg',
     border: true
@@ -33,10 +33,10 @@ export default [
   }/*,
   {
     id: 5,
-    title: '',
+    title: 'Accomplishments',
     text: '',
-    textOnRight: '',
-    image: '',
-    border: ''
+    textOnRight: false,
+    image: 'corsairHydroX.jpg',
+    border: false
   }*/
 ]

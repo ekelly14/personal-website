@@ -4,7 +4,7 @@
       {{ title }}
     </div>
     <div v-if="!textOnRight" class="flex flex-row w-full h-full mb-10">
-      <div class="h-full text-block pr-5">
+      <div class="h-full text-block pr-5 text-xl">
         {{ text }}
       </div>
       <div class="picture-block" :style="`background-image: url(/images/${imageUrl});`" />
@@ -12,7 +12,7 @@
 
     <div v-if="textOnRight" class="flex flex-row w-full h-full mb-10">
       <div class="picture-block" :style="`background-image: url(/images/${imageUrl});`" />
-      <div class="h-full text-block pl-5">
+      <div class="h-full text-block pl-5 text-xl">
         {{ text }}
       </div>
     </div>

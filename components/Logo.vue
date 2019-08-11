@@ -1,13 +1,25 @@
 <template>
-  <div class="VueToNuxtLogo">
+  <!-- <div class="VueToNuxtLogo">
     <div class="Triangle Triangle--two" />
     <div class="Triangle Triangle--one" />
     <div class="Triangle Triangle--three" />
     <div class="Triangle Triangle--four" />
-  </div>
+  </div> -->
+  <div class="logo"/>
 </template>
 
 <style>
+.logo {
+  display: inline-block;
+  height: 245px;
+  width: 245px;
+  overflow: hidden;
+  background-image: url('/images/personal_image.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
 .VueToNuxtLogo {
   display: inline-block;
   animation: turn 2s linear forwards 1s;

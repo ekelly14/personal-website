@@ -1,12 +1,18 @@
 <template>
   <no-ssr>
-    <section class="flex flex-row mx-auto fixed navbar w-full" :class="{ scrolled: isScrolled }">
+    <section class="flex flex-row mx-auto fixed navbar w-full shadow-xl" :class="{ scrolled: isScrolled }">
       <nuxt-link to="/">
         <div
           class="navitem hover:bg-teal-300 hover:text-white"
           :class="{ itemscrolled: isScrolled }"
         >Home</div>
       </nuxt-link>
+      <a href="/#about">
+        <div
+          class="navitem hover:bg-teal-300 hover:text-white"
+          :class="{ itemscrolled: isScrolled }"
+        >About Me</div>
+      </a>
       <nuxt-link to="/contact">
         <div
           class="navitem hover:bg-teal-300 hover:text-white"
@@ -54,7 +60,8 @@ export default {
 .navbar {
   background: rgb(235, 235, 235);
   border-top: 4px solid #052f5f;
-  height: 72px;
+  border-bottom: 4px solid #052f5f;
+  height: 64px;
   transition: all 0.3s;
   z-index: 1000;
 }
@@ -65,9 +72,16 @@ export default {
   padding-left: 2rem;
   padding-right: 2rem;
   margin: auto;
-  height: 72px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+.navitem:hover {
+  color: white;
+  background-color: rgb(204, 201, 201);
 }
 .itemscrolled:hover {
   background-color: rgb(204, 201, 201);
+  transition: all 0.3s;
 }
 </style>

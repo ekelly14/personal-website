@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TextBlock title="I'm Elijah Kelly." :text-on-right="false" image-url="corsairHydroX.jpg" :border-bottom="true">
+    <TextBlock title="I'm Elijah Kelly" :text-on-right="false" image-url="personal_image.jpg" :border-bottom="true" :round-image="true">
       <p>I am a current student of computer science at Missouri University of Science and Technology. I think learning new things is fun, especially when it comes to software. I spend most of my free time coding things I think are cool. I also enjoy building computers when I can get my hands on parts!</p>
     </TextBlock>
     <TextBlock title="Education" :text-on-right="true" image-url="corsairHydroX.jpg" :border-bottom="true">
@@ -36,10 +36,10 @@ import TextBlock from '~/components/general/TextBlock.vue'
 
 <style scoped>
 .link {
-  background-color: rgba(36,123,160,.4);
+  background-color: rgba(36,123,160,.2);
 }
 .link:hover {
-  background-color: rgba(6, 60, 83, 0.4);
+  background-color: rgba(120, 193, 224, 0.2);
 }
 .list {
   list-style-type: circle;

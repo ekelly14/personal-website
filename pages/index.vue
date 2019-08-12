@@ -6,12 +6,12 @@
         <div class="w-full">
           <logo />
           <h1 class="title text-blue-light">Hi! I'm Elijah.</h1>
-          <span class="text-6xl">I Can Write Your </span>
+          <span class="text-6xl ">I Can Write Your </span>
           <VueTyperWrapper class="text-6xl" :text-list="['C++', 'Python', 'JavaScript', 'Vue']" :shuffle="true"></VueTyperWrapper>
         </div>
       </div>
     </div>
-    <BodyText />
+    <BodyText id="about" style="padding-top: 100px;" />
     <div class="mb-10"/>
   </div>
 </template>
@@ -66,5 +66,8 @@ export default {
 }
 .links {
   padding-top: 15px;
+}
+.shifted-anchor {
+  top: -75px;
 }
 </style>

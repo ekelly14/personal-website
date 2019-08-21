@@ -1,13 +1,16 @@
 <template>
-  <div class="w-full">
+  <div class="w-full" style="overflow-y: scroll; scroll-behavior: smooth;" >
     <TitleBar />
     <div class="header-image">
       <div class="home w-full">
-        <div class="w-full">
-          <logo />
+        <div class="w-full px-4">
+          <!--<logo />-->
           <h1 class="title text-blue-light">Hi! I'm Elijah.</h1>
-          <span class="text-6xl ">I Can Write Your </span>
-          <VueTyperWrapper class="text-6xl" :text-list="['C++', 'Python', 'JavaScript', 'Vue']" :shuffle="true"></VueTyperWrapper>
+          <span class="text-5xl md:text-6xl ">I Can Write Your </span>
+          <VueTyperWrapper class="text-5xl md:text-6xl" :text-list="['C++', 'Python', 'JavaScript', 'Vue']" :shuffle="true"></VueTyperWrapper>
+          <a href="#about" v-smooth-scroll>
+            <img src="~assets/images/angle.png" class="h-16 w-16 mx-auto"/>
+          </a>
         </div>
       </div>
     </div>
@@ -17,6 +20,9 @@
 </template>
 
 <script>
+const vueScrollRequire = process.client ? require('vue2-smooth-scroll') : null
+const vueSmoothScroll = vueScrollRequire ? vueScrollRequire.VueSmoothScroll : null
+
 import Logo from '~/components/Logo.vue'
 import TitleBar from '~/components/header/TitleBar.vue'
 import VueTyperWrapper from '~/components/general/VueTyperWrapper.vue'
@@ -28,7 +34,8 @@ export default {
     TitleBar,
     VueTyperWrapper,
     TextBlock,
-    BodyText
+    BodyText,
+    vueSmoothScroll
   }
 }
 </script>
@@ -46,7 +53,6 @@ export default {
 .header-image {
   width: 100%;
   background-image: url('~assets/images/header.jpg');
-
 }
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,

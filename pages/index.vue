@@ -1,12 +1,12 @@
 <template>
-  <div class="w-full" style="overflow-y: scroll; scroll-behavior: smooth;" >
+  <div class="w-full" >
     <TitleBar />
     <div class="header-image">
       <div class="home w-full">
         <div class="w-full px-4">
           <!--<logo />-->
           <h1 class="title text-blue-light">Hi! I'm Elijah.</h1>
-          <span class="text-5xl md:text-6xl ">I Can Write Your </span>
+          <div class="text-5xl md:text-6xl ">I Can Write Your </div>
           <VueTyperWrapper class="text-5xl md:text-6xl" :text-list="['C++', 'Python', 'JavaScript', 'Vue']" :shuffle="true"></VueTyperWrapper>
           <a href="#about" v-smooth-scroll>
             <img src="~assets/images/angle.png" class="h-16 w-16 mx-auto"/>

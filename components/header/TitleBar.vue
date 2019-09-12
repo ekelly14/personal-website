@@ -7,7 +7,7 @@
           :class="{ itemscrolled: isScrolled }"
         >Home</div>
       </nuxt-link>
-      <a href="/#about">
+      <a href="/#about" v-scroll>
         <div
           class="navitem hover:bg-teal-300 hover:text-white"
           :class="{ itemscrolled: isScrolled }"
@@ -30,8 +30,13 @@
 </template>
 
 <script>
+const vueScrollRequire = process.client ? require('vue2-smooth-scroll') : null
+const vueScroll = vueScrollRequire ? vueScrollRequire.VueScroll : null
 export default {
   name: 'TitleBar',
+  components: {
+    vueScroll
+  },
   data() {
     return {
       isScrolled: false
@@ -69,8 +74,8 @@ export default {
   background: white;
 }
 .navitem {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   margin: auto;
   min-height: 60px;
   display: flex;

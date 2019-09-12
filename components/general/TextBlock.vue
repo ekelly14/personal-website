@@ -55,7 +55,7 @@
   flex-basis: 55%;
 }
 .picture-block {
-  background-color: aquamarine;
+  background-color: rgba(218, 223, 225, 1);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

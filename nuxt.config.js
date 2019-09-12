@@ -60,5 +60,12 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  }
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: 'favicon.ico',
+    },
+  ]
 }

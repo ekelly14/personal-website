@@ -36,6 +36,11 @@ export default {
     TextBlock,
     BodyText,
     vueSmoothScroll
+  },
+  head() {
+    return {
+      title: "Elijah Kelly | Home"
+    }
   }
 }
 </script>

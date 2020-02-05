@@ -1,21 +1,18 @@
 <template>
-  <div class="w-full" >
+  <div class="page-container" >
     <TitleBar />
-    <div class="header-image">
-      <div class="home w-full">
-        <div class="w-full px-4">
-          <!--<logo />-->
-          <h1 class="title text-blue-light">Hi! I'm Elijah.</h1>
-          <div class="text-5xl md:text-6xl ">I Can Write Your </div>
-          <VueTyperWrapper class="text-5xl md:text-6xl" :text-list="['C++', 'Python', 'JavaScript', 'Vue']" :shuffle="true"></VueTyperWrapper>
-          <a href="#about" v-smooth-scroll>
-            <img src="~assets/images/angle.png" class="h-16 w-16 mx-auto"/>
-          </a>
+    <div class="px-5" style="padding-top: 64px;">
+      <div class="p-5 my-5" style="background-color: blue;">Full Page Header Here</div>
+      <div class="flex flex-row">
+        <div class="p-5" style="background-color: white; flex-basis: 66%;">
+          <h1>Body Title</h1>
+          <span>Lots and lots of text</span>
+        </div>
+        <div style="background-color: black; flex-basis: 33%;">
+          Image or somthing idk
         </div>
       </div>
     </div>
-    <BodyText id="about" style="padding-top: 100px;" />
-    <div class="mb-10"/>
   </div>
 </template>
 
@@ -49,6 +46,10 @@ export default {
   align-items: center;
   text-align: center;
   background-color: rgba(41, 41, 41, .95);
+}
+.page-container {
+  height: 100vh;
+  background-color: burlywood;
 }
 .header-image {
   width: 100%;
